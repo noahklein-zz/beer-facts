@@ -8,7 +8,7 @@
  # Constant in the beerApp.
 ###
 angular.module 'beerApp'
-  .constant 'beers', [
+  .constant 'Beers', [
     name: "Amstel Light"
     calories: 95
     alchohol: 3.5
@@ -118,7 +118,7 @@ angular.module 'beerApp'
     alchohol: 5.1
   ,
     name: "Michelob Ultra"
-    calories: lager-95
+    calories: 95
     alchohol: 4.2
   ,
     name: "Miller Genuine Draft"

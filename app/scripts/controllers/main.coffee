@@ -8,10 +8,14 @@
  # Controller of the beerApp
 ###
 angular.module 'beerApp'
-  .controller 'MainCtrl', ->
-    @awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
-    return
+  .controller 'MainCtrl', ['$scope', 'Beers',
+    ($scope, Beers) ->
+      $scope.data =
+        beers: Beers
+      $scope.search =
+        predicate: 'name'
+        filter: ''
+        orderBy: (predicate) ->
+          $scope.search.predicate = if $scope.search.predicate == predicate then '-' + predicate else predicate
+      return
+  ]
